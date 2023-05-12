@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navContainer">
+            <a href="../index.html"><img class="logo"
+                    src="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
+                    alt="logo"></a>
+            <ul class="ulNavContainer">
+                <li><a class="navAnchor" href="Statistics.html">Estadísticas</a></li>
+                <li><a class="navAnchor" href="#">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="container">
+        <h1> ¡Contáctanos! </h1>
+        <div class="underline"></div><!-- DUDOSO -->
+
+        <form id="contact_form">
+            <div class="name">
+                <input type="text" placeholder="NOMBRE" name="name"  required>
+            </div>
+            <div class="lastname">
+                <input type="text" placeholder="APELLIDO" name="lastname"  required>
+            </div>
+            <div class="email">
+                <input type="email" placeholder="EMAIL" name="email"  required>
+            </div>
+            <div class="subject">
+                <select placeholder="ASUNTO" name="subject" required>
+                    <option disabled hidden selected>ASUNTO</option>
+                    <option>REPORTE DE PROBLEMAS</option>
+                    <option>SUGERENCIAS</option>
+                </select>
+            </div>
+            <div class="message">
+                <textarea name="message" placeholder="¿QUÉ TE GUSTARÍA DECIRNOS?" cols="30" rows="5"
+                    required></textarea>
+            </div>
+            <div class="submit">
+                <input type="submit" value="ENVIAR" id="form_button" />
+            </div>
+        </form><!-- // End form -->
+    </div><!-- // End #container -->
+
+</body>
+
+</html>

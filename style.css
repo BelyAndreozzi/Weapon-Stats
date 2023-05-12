@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(32, 32, 32)
+}
+
+
+/*  NAV */
+.navContainer {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ff8c00;
+}
+
+.logo {
+    width: 100px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.navAnchor {
+    text-decoration: none;
+    color: white;
+    padding: 0px 25px;
+    text-transform: uppercase;
+}
+
+.ulNavContainer {
+    display: flex;
+    align-items: center;
+}
+
+
+/* HOME */
+
+.mainContainer {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+}
+
+.rightContainer {
+    background-color: lightgreen;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.weaponTitle {
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(79, 78, 78);
+    border-radius: 20px;
+    border: 1px solid #ff1493;
+    margin: 10px 0px;
+}
+
+.weaponContainer {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.weaponContainer:hover {
+    border: 1px solid #bf00ff;
+    box-shadow: rgba(204, 173, 112, 0.4) 0px 0px 8px;
+}
+
+.infoWeaponContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+.weaponName {
+    font: 500 1rem / 2rem Roboto, sans-serif;
+    letter-spacing: 0.025rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+}
+
+.iconPrice {
+    height: 12px;
+    width: 12px;
+}
+
+.textPrice {
+    margin-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+    color: white;
+}
+
+
+/* STATISTICS */
+.statisticsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table.weaponTable {
+    background-color: rgb(207, 207, 207);
+    border-spacing: 0;
+    margin: 2rem;
+    text-align: center;
+    font: 1rem Roboto, sans-serif;
+    border: 2px solid #ff1493;
+}
+
+table.weaponTable thead {
+    background-color: #ff1493;
+}
+
+table.weaponTable thead th {
+    padding: 1rem;
+}
+
+table.weaponTable td {
+    padding: 0.7rem;
+}
+
+table.weaponTable tr:nth-child(even) {
+    background-color: white;
+}
+
+ul.listStadistics {
+    color: #ff1493;
+}
+
+
+/* FORM */
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+input {
+    line-height: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+#container {
+    border: solid 3px #474544;
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+}
+
+form {
+    padding: 37.5px;
+    margin: 50px 0;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.underline {
+    border-bottom: solid 2px #b9b3b0;
+    margin: 1em auto;
+    width: 80px;
+}
+
+.lastname {
+    float: right;
+    width: 45%;
+}
+
+input[type='text'],
+[type='email'],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+    color: grey;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    width: 100%;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+.subject {
+    width: 100%;
+}
+
+.email {
+    width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+}
+
+#form_button {
+    background: none;
+    border: solid 2px #b9b3b0;
+    color: rgb(88, 88, 87);
+    cursor: pointer;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin: 0 40%;
+}
+
+#form_button:hover {
+    background: #5e5d5d;
+    color: #b9b3b0;
+}
+
+option {
+    background-color: rgb(32, 32, 32);
+}
