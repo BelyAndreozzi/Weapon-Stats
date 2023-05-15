@@ -16,7 +16,7 @@ main {
 }
 
 body {
-    background-color: rgb(32, 32, 32)
+    background-color: #202020
 }
 
 
@@ -73,17 +73,17 @@ body {
     text-align: center;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(79, 78, 78);
+    background-color: #4E4E4E;
     border-radius: 20px;
     border: 1px solid #ff1493;
     margin: 10px 0px;
 }
 
 .weaponContainer {
-    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff33;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(255, 255, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.87);
+    box-shadow: 0 4px 30px #ffff001a;
+    border: 1px solid #ffffffde;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +97,7 @@ body {
 
 .weaponContainer:hover {
     border: 1px solid #bf00ff;
-    box-shadow: rgba(204, 173, 112, 0.4) 0px 0px 8px;
+    box-shadow: #ccad7066 0px 0px 8px;
 }
 
 .infoWeaponContainer {
@@ -111,7 +111,7 @@ body {
 .weaponName {
     font: 500 1rem / 2rem Roboto, sans-serif;
     letter-spacing: 0.025rem;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     text-transform: uppercase;
 }
 
@@ -142,28 +142,32 @@ body {
 }
 
 table.weaponTable {
-    background-color: rgb(207, 207, 207);
     border-spacing: 0;
     margin: 2rem;
     text-align: center;
     font: 1rem Roboto, sans-serif;
     border: 2px solid #ff1493;
+    box-shadow: #ff1493 0px 0px 8px;
+    color: white;
 }
 
 table.weaponTable thead {
-    background-color: #ff1493;
+    color: lightgray;
+    text-transform: uppercase;
 }
 
 table.weaponTable thead th {
     padding: 1rem;
+    border-bottom: #ff1493 1px solid;
 }
 
 table.weaponTable td {
     padding: 0.7rem;
 }
 
-table.weaponTable tr:nth-child(even) {
-    background-color: white;
+table.weaponTable tr:hover td{
+    border-bottom: #bf00ff 1px solid;
+    border-top: #bf00ff 1px solid;
 }
 
 ul.listStadistics {
@@ -191,10 +195,11 @@ textarea {
 }
 
 #container {
-    border: solid 3px #474544;
+    border: solid 2px #ff1493;
     max-width: 768px;
     margin: 60px auto;
     position: relative;
+    box-shadow: #ff1493 0px 0px 8px;
 }
 
 form {
@@ -213,7 +218,7 @@ h1 {
 }
 
 .underline {
-    border-bottom: solid 2px #b9b3b0;
+    border-bottom: solid 2px #bf00ff;
     margin: 1em auto;
     width: 80px;
 }
@@ -229,7 +234,7 @@ select,
 textarea {
     background: none;
     border: none;
-    border-bottom: solid 2px #474544;
+    border-bottom: solid 2px #650087;
     color: grey;
     font-size: 1em;
     letter-spacing: 1px;
@@ -262,16 +267,36 @@ textarea:focus {
     width: 100%;
 }
 
+.captchaContainer {
+    color: grey;
+    position: left;
+    width: 50%;
+}
+
 textarea {
     line-height: 150%;
     height: 150px;
     resize: none;
 }
 
-#form_button {
+.btnInvalid{
     background: none;
-    border: solid 2px #b9b3b0;
-    color: rgb(88, 88, 87);
+    border: solid 2px #510969;
+    color: #585857;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin: 0 40%;
+}
+
+
+.btnValid {
+    background: none;
+    border: solid 2px #bf00ff;
+    color: #585857;
     cursor: pointer;
     font-size: 0.875em;
     font-weight: bold;
@@ -282,11 +307,12 @@ textarea {
     margin: 0 40%;
 }
 
-#form_button:hover {
-    background: #5e5d5d;
+.btnValid:hover {
+    background: #5b1373;
     color: #b9b3b0;
+    box-shadow: #bf00ff 0px 0px 8px;
 }
 
 option {
-    background-color: rgb(32, 32, 32);
+    background-color: #202020;
 }

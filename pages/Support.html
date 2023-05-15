@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Soporte</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <h1> ¡Contáctanos! </h1>
         <div class="underline"></div><!-- DUDOSO -->
 
-        <form id="contact_form">
+        <form id="contactForm">
             <div class="name">
                 <input type="text" placeholder="NOMBRE" name="name"  required>
             </div>
@@ -37,7 +37,7 @@
                 <input type="email" placeholder="EMAIL" name="email"  required>
             </div>
             <div class="subject">
-                <select placeholder="ASUNTO" name="subject" required>
+                <select name="subject" required>
                     <option disabled hidden selected>ASUNTO</option>
                     <option>REPORTE DE PROBLEMAS</option>
                     <option>SUGERENCIAS</option>
@@ -47,12 +47,20 @@
                 <textarea name="message" placeholder="¿QUÉ TE GUSTARÍA DECIRNOS?" cols="30" rows="5"
                     required></textarea>
             </div>
+
+            <div class="captchaContainer">
+                    <p>Kay/on't check:</p>
+                    <span id="valorA">  </span> + <span id="valorB"> </span> 
+                    <input type="text" name="userAnswer" id="userAnswer"required maxlength="2">
+            </div>
+
             <div class="submit">
-                <input type="submit" value="ENVIAR" id="form_button" />
+                <input type="submit" value="ENVIAR" id="formButton" class="btnInvalid" disabled/>
             </div>
         </form><!-- // End form -->
     </div><!-- // End #container -->
 
+    <script src="../main.js"></script>
 </body>
 
 </html>
