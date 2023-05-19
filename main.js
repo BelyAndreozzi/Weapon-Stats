@@ -10,14 +10,9 @@ function numberGenerator() {
     let b = Math.floor((Math.random() * 10)+1)
     c = a + b
 
-    // PREGUNTAR CUÁL ESTÁ BIEN
     document.querySelector("#valorA").innerHTML = a
-
-    let valorB = document.querySelector("#valorB")
-    valorB.innerHTML = b
+    document.querySelector("#valorB").innerHTML = b
 }
-
-
 
 function captchaGenerator() {
     
@@ -26,7 +21,7 @@ function captchaGenerator() {
     userAnswerInput.addEventListener('input', function(){
         let userAnswerValue = userAnswerInput.value
         if (isNaN(userAnswerValue)){
-            userAnswerInput.value = "" // modificar 
+            userAnswerInput.value = ""
         } else {
             checkAnswer(userAnswerValue)
         }
@@ -43,6 +38,7 @@ function checkAnswer (userAnswerValue) {
         document.querySelector("#formButton").setAttribute("disabled","")
         document.querySelector("#formButton").classList.remove("btnValid")
         document.querySelector("#formButton").classList.add("btnInvalid")
+        
     }
 }
 
