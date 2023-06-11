@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon"
+        href="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
+        type="image/x-icon">
     <title>Soporte</title>
 </head>
 
@@ -14,27 +17,35 @@
         <nav class="navContainer">
             <a href="../index.html"><img class="logo"
                     src="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
-                    alt="logo"></a>
+                    alt="logo">
+            </a>
+
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="menuBtn">
+                <img class="logo" src="../src/icons/menu.png" alt="Boton de menu">
+            </label>
+
             <ul class="ulNavContainer">
                 <li><a class="navAnchor" href="statistics.html">Estadísticas</a></li>
+                <li><a class="navAnchor" href="premier.html">Premier</a></li>
                 <li><a class="navAnchor" href="#">Soporte</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="formMainContainer">
-        <h1> ¡Contáctanos! </h1>
-        <div class="underline"></div><!-- DUDOSO? -->
 
+    <main id="formMainContainer">
+        <h1 class="formTitle"> ¡Contáctanos! </h1>
+        <div class="underline"></div>
         <form id="contactForm">
             <div class="name">
-                <input type="text" placeholder="NOMBRE" name="name"  required>
+                <input type="text" placeholder="NOMBRE" name="name" required>
             </div>
             <div class="lastname">
-                <input type="text" placeholder="APELLIDO" name="lastname"  required>
+                <input type="text" placeholder="APELLIDO" name="lastname" required>
             </div>
             <div class="email">
-                <input type="email" placeholder="EMAIL" name="email"  required>
+                <input type="email" placeholder="EMAIL" name="email" required>
             </div>
             <div class="subject">
                 <select name="subject" required>
@@ -49,19 +60,26 @@
             </div>
 
             <div class="captchaContainer">
-                    <p>KAY/ON'T CHECK:</p>
-                    <p><span id="valorA">  </span> + <span id="valorB"> </span></p>
-                    <input type="text" name="userAnswer" id="userAnswer" required maxlength="2">
-                    <img src="" alt="">
+                <p>KAY/ON'T CHECK:</p>
+                <p><span id="valorA"> </span> + <span id="valorB"> </span></p>
+                <input type="text" name="userAnswer" id="userAnswer" required maxlength="2">
             </div>
 
-            <div class="submit">
-                <input type="submit" value="ENVIAR" id="formButton" class="btnInvalid" disabled/>
+            <div class="submitBtn">
+                <input type="submit" value="ENVIAR" id="formButton" class="btnInvalid" disabled />
             </div>
         </form>
-    </div>
 
-    <script src="../main.js"></script>
+        <div class="submittedForm">
+            <p>¡Tu formulario ha sido enviado!</p>
+            <p>Te contactaremos dentro de las próximas 72<span>hs</span> vía e-mail. </p>
+        </div>
+
+    </main>
+
+
+
+    <script src="../contactForm.js"></script>
 </body>
 
 </html>

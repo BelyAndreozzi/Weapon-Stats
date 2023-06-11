@@ -6,240 +6,256 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="shortcut icon"
+        href="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
+        type="image/x-icon">
+    <title>Valorant Stats</title>
 </head>
 
 <body>
     <header>
         <nav class="navContainer">
-            <a href="index.html">
-                <img class="logo" src="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg" alt="logo">
+            <a href="#">
+                <img class="logo"
+                    src="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
+                    alt="logo">
             </a>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="menuBtn">
+                <img class="logo" src="src/icons/menu.png" alt="Boton de menu">
+            </label>
+
             <ul class="ulNavContainer">
                 <li><a class="navAnchor" href="pages/statistics.html">Estadísticas</a></li>
+                <li><a class="navAnchor" href="pages/premier.html">Premier</a></li>
                 <li><a class="navAnchor" href="pages/support.html">Soporte</a></li>
             </ul>
+
+
+
         </nav>
     </header>
 
+    <!-- Container global -->
+    <main class="indexMainContainer">
+        <!--Seccion de pistola-->
+        <section>
+            <p class="weaponTitle">PISTOLAS</p>
 
-    <main>
-        <!-- Container global -->
-        <section class="indexMainContainer">
-            <!--Seccion de pistola-->
-            <div>
-                <p class="weaponTitle">PISTOLAS</p>
+            <article class="weaponContainer">
+                <img src="src/weapons/pistols/classic.png" alt="Classic">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">Classic</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">FREE</figcaption>
+                    </figure>
+                </div>
+            </article>
 
-                <div class="weaponContainer">
-                    <img src="src/weapons/pistols/classic.png" alt="Classic">
+            <article class="weaponContainer">
+                <img src="src/weapons/pistols/shorty.png" alt="Shorty">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">Shorty</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">150</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/pistols/frenzy.png" alt="Frenzy">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">Fenzy</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">450</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/pistols/ghost.png" alt="Ghost">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">Ghost</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">500</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/pistols/sheriff.png" alt="Sheriff">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">Sheriff</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">800</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+        <!--Seccion smg y shotgun-->
+        <div>
+            <!-- Seccion SMG -->
+            <section>
+                <p class="weaponTitle">SUBFUSIL</p>
+                <article class="weaponContainer">
+                    <img src="src/weapons/smg/stinger.png" alt="Stinger">
                     <div class="infoWeaponContainer">
-                        <p class="weaponName">Classic</p>
+                        <p class="weaponName">Stinger</p>
                         <figure class="priceContainer">
                             <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">FREE</figcaption>
+                            <figcaption class="textPrice">1100</figcaption>
                         </figure>
                     </div>
-                </div>
+                </article>
 
-                <div class="weaponContainer">
-                    <img src="src/weapons/pistols/shorty.png" alt="Shorty">
+                <article class="weaponContainer">
+                    <img src="src/weapons/smg/spectre.png" alt="Spectre">
                     <div class="infoWeaponContainer">
-                        <p class="weaponName">Shorty</p>
+                        <p class="weaponName">Spectre</p>
                         <figure class="priceContainer">
                             <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">150</figcaption>
+                            <figcaption class="textPrice">1600</figcaption>
                         </figure>
                     </div>
-                </div>
-
-                <div class="weaponContainer">
-                    <img src="src/weapons/pistols/frenzy.png" alt="Frenzy">
+                </article>
+            </section>
+            <!--Seccion Shotguns-->
+            <section class="shothunContainer">
+                <p class="weaponTitle">ESCOPETA</p>
+                <article class="weaponContainer">
+                    <img src="src/weapons/shotguns/bucky.png" alt="Bucky">
                     <div class="infoWeaponContainer">
-                        <p class="weaponName">Fenzy</p>
+                        <p class="weaponName">Bucky</p>
                         <figure class="priceContainer">
                             <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">450</figcaption>
+                            <figcaption class="textPrice">850</figcaption>
                         </figure>
                     </div>
-                </div>
+                </article>
 
-                <div class="weaponContainer">
-                    <img src="src/weapons/pistols/ghost.png" alt="Ghost">
+                <article class="weaponContainer">
+                    <img src="src/weapons/shotguns/judge.png" alt="Stinger">
                     <div class="infoWeaponContainer">
-                        <p class="weaponName">Ghost</p>
+                        <p class="weaponName">Judge</p>
                         <figure class="priceContainer">
                             <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">500</figcaption>
+                            <figcaption class="textPrice">1850</figcaption>
                         </figure>
                     </div>
-                </div>
+                </article>
+            </section>
+        </div>
 
-                <div class="weaponContainer">
-                    <img src="src/weapons/pistols/sheriff.png" alt="Sheriff">
+        <!--Seccion de Rifles-->
+        <section>
+            <p class="weaponTitle">RIFLES</p>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/rifles/bulldog.png" alt="Bulldog">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">BULLDOG</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">2050</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/rifles/guardian.png" alt="Guardian">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">GUARDIAN</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">2250</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <a href="pages/weapons/vandal.html">
+                <article class="weaponContainer">
+                    <img src="src/weapons/rifles/vandal.png" alt="Vandal">
                     <div class="infoWeaponContainer">
-                        <p class="weaponName">Sheriff</p>
-                        <figure class="priceContainer">
-                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">800</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!--Seccion smg y shotgun-->
-            <div>
-                <!-- Seccion SMG -->
-                <div>
-                    <p class="weaponTitle">SUBFUSIL</p>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/smg/stinger.png" alt="Stinger">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">Stinger</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">1100</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div class="weaponContainer">
-                        <img src="src/weapons/smg/spectre.png" alt="Spectre">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">Spectre</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">1600</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <!--Seccion Shotguns-->
-                <div class="shothunContainer">
-                    <p class="weaponTitle">ESCOPETA</p>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/shotguns/bucky.png" alt="Bucky">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">Bucky</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">850</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div class="weaponContainer">
-                        <img src="src/weapons/shotguns/judge.png" alt="Stinger">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">Judge</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">1850</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Seccion de Rifles-->
-            <div>
-                <p class="weaponTitle">RIFLES</p>
-                <div class="weaponContainer">
-                    <img src="src/weapons/rifles/bulldog.png" alt="Bulldog">
-                    <div class="infoWeaponContainer">
-                        <p class="weaponName">BULLDOG</p>
-                        <figure class="priceContainer">
-                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">2050</figcaption>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="weaponContainer">
-                    <img src="src/weapons/rifles/guardian.png" alt="Guardian">
-                    <div class="infoWeaponContainer">
-                        <p class="weaponName">GUARDIAN</p>
-                        <figure class="priceContainer">
-                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                            <figcaption class="textPrice">2250</figcaption>
-                        </figure>
-                    </div>
-                </div>
-
-                <a href="pages/weapons/vandal.html"> 
-                    <div class="weaponContainer">
-                        <img src="src/weapons/rifles/vandal.png" alt="Vandal">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">VANDAL</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">2900</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="weaponContainer">
-                    <img src="src/weapons/rifles/phantom.png" alt="Phantom">
-                    <div class="infoWeaponContainer">
-                        <p class="weaponName">PHANTOM</p>
+                        <p class="weaponName">VANDAL</p>
                         <figure class="priceContainer">
                             <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
                             <figcaption class="textPrice">2900</figcaption>
                         </figure>
                     </div>
+                </article>
+            </a>
+
+            <article class="weaponContainer">
+                <img src="src/weapons/rifles/phantom.png" alt="Phantom">
+                <div class="infoWeaponContainer">
+                    <p class="weaponName">PHANTOM</p>
+                    <figure class="priceContainer">
+                        <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                        <figcaption class="textPrice">2900</figcaption>
+                    </figure>
                 </div>
-            </div>
-            <!--Seccion Sniper y machine guns-->
-            <div>
-                <div>
-                    <p class="weaponTitle">FRANCOTIRADOR</p>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/sniperrifles/marshal.png" alt="Marshal">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">MARSHAL</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">950</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/sniperrifles/operator.png" alt="Operator">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">OPERATOR</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">4700</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <!--Seccion Shotguns-->
-                <div class="shothunContainer">
-                    <p class="weaponTitle">AMETRALLADORA</p>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/machineguns/ares.png" alt="Ares">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">ARES</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">1600</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="weaponContainer">
-                        <img src="src/weapons/machineguns/odin.png" alt="Odin">
-                        <div class="infoWeaponContainer">
-                            <p class="weaponName">ODIN</p>
-                            <figure class="priceContainer">
-                                <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
-                                <figcaption class="textPrice">3200</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </article>
         </section>
+        <!--Seccion Sniper y machine guns-->
+        <div>
+            <!-- Sección Francotirador -->
+            <section>
+                <p class="weaponTitle">FRANCOTIRADOR</p>
+                <article class="weaponContainer">
+                    <img src="src/weapons/sniperrifles/marshal.png" alt="Marshal">
+                    <div class="infoWeaponContainer">
+                        <p class="weaponName">MARSHAL</p>
+                        <figure class="priceContainer">
+                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                            <figcaption class="textPrice">950</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="weaponContainer">
+                    <img src="src/weapons/sniperrifles/operator.png" alt="Operator">
+                    <div class="infoWeaponContainer">
+                        <p class="weaponName">OPERATOR</p>
+                        <figure class="priceContainer">
+                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                            <figcaption class="textPrice">4700</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <!--Seccion ametralladora-->
+            <section>
+                <p class="weaponTitle">AMETRALLADORA</p>
+                <article class="weaponContainer">
+                    <img src="src/weapons/machineguns/ares.png" alt="Ares">
+                    <div class="infoWeaponContainer">
+                        <p class="weaponName">ARES</p>
+                        <figure class="priceContainer">
+                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                            <figcaption class="textPrice">1600</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="weaponContainer">
+                    <img src="src/weapons/machineguns/odin.png" alt="Odin">
+                    <div class="infoWeaponContainer">
+                        <p class="weaponName">ODIN</p>
+                        <figure class="priceContainer">
+                            <img class="iconPrice" src="src/icons/Credits_icon.png" alt="Icono de precio">
+                            <figcaption class="textPrice">3200</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
+    <script src="hamburguerMenu.js"></script>
 </body>
 
 </html>

@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadísticas</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon"
+        href="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
+        type="image/x-icon">
+    <title>Estadísticas</title>
 </head>
 
 <body>
@@ -14,20 +17,28 @@
         <nav class="navContainer">
             <a href="../index.html"><img class="logo"
                     src="https://static.vecteezy.com/system/resources/previews/007/494/162/non_2x/automatic-weapon-logo-icon-battle-weapons-pistols-rifles-military-and-weapons-illustration-free-vector.jpg"
-                    alt="logo"></a>
+                    alt="logo">
+            </a>
+
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="menuBtn">
+                <img class="logo" src="../src/icons/menu.png" alt="Boton de menu">
+            </label>
+
             <ul class="ulNavContainer">
                 <li><a class="navAnchor" href="#">Estadísticas</a></li>
+                <li><a class="navAnchor" href="premier.html">Premier</a></li>
                 <li><a class="navAnchor" href="support.html">Soporte</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="statisticsContainer">
-            <h1>Estadísticas armamentísticas</h1>
-            <div class="underline"></div>
-            <!-- Tabla estadisticas -->
-            <table class="weaponTable">
+    <main class="statisticsContainer">
+        <h1>Estadísticas armamentísticas</h1>
+        <div class="underline"></div>
+        <!-- Tabla estadisticas -->
+        <div class="tableContainer">
+            <table class="tables">
                 <thead>
                     <th>Arma</th>
                     <th>Categoria</th>
@@ -186,12 +197,12 @@
 
             <!-- Lista definiciones -->
 
-            <ul class="listStadistics">
-                <li>*Win %: Muestra el procentaje de victorias con respectiva arma. </li>
-                <li>*Pick %: Indica el porcentaje de elección por ronda.</li>
-                <li>*HS %: Porcentaje de tiros a la cabeza (headshots).</li>
-            </ul>
         </div>
+        <ul class="listStadistics">
+            <li>*Win %: Muestra el procentaje de victorias con respectiva arma. </li>
+            <li>*Pick %: Indica el porcentaje de elección por ronda.</li>
+            <li>*HS %: Porcentaje de tiros a la cabeza (headshots).</li>
+        </ul>
     </main>
 
 </body>

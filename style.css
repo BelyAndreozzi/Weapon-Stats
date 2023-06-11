@@ -1,3 +1,8 @@
+/* GENERAL */
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,49 +15,101 @@ li {
     list-style: none;
 }
 
-main {
-    width: 100%;
-    height: 100vh;
-}
-
 body {
     background-color: #202020;
+    height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
 
-/*  NAV */
-.navContainer {
+h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    width: auto;
+}
+
+.underline {
+    border-bottom: solid 2px #bf00ff;
+    margin: 0.75rem auto;
+    width: 80px;
+}
+
+/* NAV */
+
+nav.navContainer {
+    height: 75px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     border-bottom: 2px solid #ff8c00;
 }
 
 .logo {
-    height: 70px;
+    height: 60px;
     border-radius: 50%;
     margin: 5px;
 }
 
-.navAnchor {
-    text-decoration: none;
-    color: white;
-    padding: 0px 10px;
-    text-transform: uppercase;
+.ulNavContainer {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 75px;
+    background-color: #ff8c00;
+    float: right;
+    text-align: center;
+    transition: all .5s;
 }
 
-.ulNavContainer {
-    display: flex;
-    align-items: center;
+.ulNavContainer li {
+    opacity: 0;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.ulNavContainer .navAnchor {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ulNavContainer .navAnchor:hover {
+    color: #bf00ff;
+    transition: 0.5s;
+}
+
+.menuBtn {
+    cursor: pointer;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~.ulNavContainer {
+    height: 100vh;
+}
+
+#checkbox:checked~.ulNavContainer li {
+    opacity: 1;
 }
 
 
 /* HOME */
-
 .indexMainContainer {
-    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 .weaponTitle {
@@ -72,8 +129,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 15%;
-    width: auto;
+    width: 100%;
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -82,7 +138,6 @@ body {
     border: 1px solid #bf00ff;
     box-shadow: #ccad7066 0px 0px 8px;
 }
-
 
 .infoWeaponContainer {
     width: 100%;
@@ -113,19 +168,24 @@ body {
     color: white;
 }
 
-a{
-    text-decoration: none;
-}
 
-/* STATISTICS */
+
+/* TABLES */
 .statisticsContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-table.weaponTable {
+.tableContainer {
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table.tables {
     border-spacing: 0;
     margin: 2rem;
     text-align: center;
@@ -133,78 +193,83 @@ table.weaponTable {
     border: 2px solid #ff1493;
     box-shadow: #ff1493 0px 0px 8px;
     color: white;
+    width: 100%;
 }
 
-table.weaponTable thead {
+table.tables thead {
     color: lightgray;
     text-transform: uppercase;
 }
 
-table.weaponTable thead th {
-    padding: 1rem;
+table.tables thead th {
+    padding: 0.5rem;
     border-bottom: #ff1493 1px solid;
 }
 
-table.weaponTable td {
-    padding: 0.7rem;
+table.tables td {
+    padding: 0.3rem;
 }
 
-table.weaponTable tr:hover td {
+table.tables tr:hover td {
     border-bottom: #bf00ff 1px solid;
     border-top: #bf00ff 1px solid;
 }
 
 ul.listStadistics {
-    color: #ff1493;
+    border: 2px solid #ff1493;
+    box-shadow: #ff1493 0px 0px 8px;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    width: 80%;
 }
 
-
-/* FORM */
-
-button {
-    overflow: visible;
-}
-
-button,
-select {
-    text-transform: none;
-}
-
-input {
-    line-height: normal;
-}
-
-textarea {
-    overflow: auto;
-}
-
+/* CONTACT FORM */
 #formMainContainer {
     border: solid 2px #ff1493;
-    max-width: 768px;
-    margin: 60px auto;
-    position: relative;
+    margin: 60px 15px;
+    display: flex;
+    flex-direction: column;
     box-shadow: #ff1493 0px 0px 8px;
 }
 
+.hideContactForm {
+    display: none;
+}
+
+.submittedForm {
+    display: none;
+    padding: 20px;
+    color: lightgrey;
+    text-align: center;
+
+    /* border: solid 2px #ff1493;
+    
+    margin: 60px 40px;
+    box-shadow: #ff1493 0px 0px 8px; 
+    color: white;
+    */
+    justify-content: center;
+}
+
+.submittedForm p {
+    font-size: 23px;
+}
+
+.showSubmittedForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
 form {
     padding: 37.5px;
-    margin: 50px 0;
-}
-
-h1 {
-    color: white;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 7px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 1rem;
-}
-
-.underline {
-    border-bottom: solid 2px #bf00ff;
-    margin: 0.75rem auto;
-    width: 80px;
+    margin: 20px 0;
 }
 
 input[type='text'],
@@ -228,33 +293,10 @@ textarea:focus {
     outline: none;
 }
 
-.lastname {
-    float: right;
-    width: 45%;
-}
-
-.message {
-    float: none;
-}
-
-.name {
-    float: left;
-    width: 45%;
-}
-
-.subject {
-    width: 100%;
-}
-
-.email {
-    width: 100%;
-}
-
 .captchaContainer {
     border: solid 2px #650087;
     color: #c5c3c3;
-    padding-right: 50%;
-    width: 35%;
+    width: 100%;
     margin: 0 auto 20px auto;
     padding: 10px;
     text-align: center;
@@ -266,20 +308,7 @@ textarea {
     resize: none;
 }
 
-.btnInvalid {
-    background: none;
-    border: solid 2px #510969;
-    color: #585857;
-    font-size: 0.875em;
-    font-weight: bold;
-    outline: none;
-    padding: 20px 35px;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    margin: 0 40%;
-}
-
-
+.btnInvalid,
 .btnValid {
     background: none;
     border: solid 2px #bf00ff;
@@ -288,10 +317,11 @@ textarea {
     font-size: 0.875em;
     font-weight: bold;
     outline: none;
-    padding: 20px 35px;
+    padding: 14px 25px;
     text-transform: uppercase;
     transition: all 0.3s;
-    margin: 0 40%;
+    margin: 10px;
+    display: block;
 }
 
 .btnValid:hover {
@@ -300,33 +330,43 @@ textarea {
     box-shadow: #bf00ff 0px 0px 8px;
 }
 
+.submitBtn {
+    display: flex;
+    justify-content: center;
+}
+
 option {
     background-color: #202020;
 }
 
 
+
 /* VANDAL PAGE */
 
 .weaponMainContainer {
+    width: 100%;
     height: 100%;
 }
 
 .topContainer {
     align-items: center;
-    height: 40%;
+    height: 65%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
 .bottomContainer {
     display: flex;
-    height: 40%;
+    height: 50%;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
 }
 
 .mainFeatures {
-    width: 20%;
+    width: 50%;
     height: 70%;
     border: solid 2px #bc14ff;
     border-radius: 5%;
@@ -339,24 +379,29 @@ option {
     align-items: center;
 }
 
-.mainFeatures span {
+.mainFeatures span,
+.fireModeInfo span,
+.submittedForm span {
     color: lightgrey;
     font-size: 12px;
 }
 
 .dañoImg {
     height: 50%;
-    width: auto;
+    width: fit-content;
 }
 
 .videoContainer {
     border: 3px solid #c40b6d;
     box-shadow: #50032c 0px 0px 30px;
-    height: 80%;
+    height: auto;
+    margin: 2rem 0;
+    width: 90%;
 }
 
-.weaponVideo {
+.videoContainer video {
     height: 100%;
+    width: 100%;
 }
 
 .fireModeInfo {
@@ -372,11 +417,199 @@ option {
     padding: 20px;
 }
 
-.fireModeInfo span {
-    color: lightgrey;
-    font-size: 12px;
-}
-
 .clickImg {
     height: 5vh;
+}
+
+
+
+/* DINAMIC TABLE */
+.dinamicTableMainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dinamicTableFormContainer {
+    border: solid 2px #ff1493;
+    margin: 2rem;
+    box-shadow: #ff1493 0px 0px 8px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dinamicTableBtn {
+    display: flex;
+}
+
+
+
+/* Media Queries */
+/* Tablets */
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        margin-left: 4rem;
+    }
+
+    .navAnchor {
+        padding: 5px 10px;
+    }
+
+    .menuBtn {
+        display: none;
+    }
+
+    .ulNavContainer {
+        position: relative;
+        top: 0;
+        float: right;
+        text-align: right;
+        margin-right: 25px;
+    }
+
+    .ulNavContainer li {
+        display: inline-block;
+        opacity: 1;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .indexMainContainer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 50px;
+    }
+
+    .weaponContainer,
+    .weaponTitle {
+        width: 80%;
+        margin: 20px;
+    }
+
+    /* TABLES */
+    .tableContainer {
+        align-items: center;
+    }
+
+    table.tables {
+        font-size: 1.2rem;
+    }
+
+    table.tables thead th {
+        padding: 1rem;
+    }
+
+    table.tables td {
+        padding: 1rem;
+    }
+
+    table.tables {
+        width: 60%;
+    }
+
+    /* FORM */
+
+    #formMainContainer {
+        max-width: 768px;
+        margin: 60px 45px;
+    }
+
+    .captchaContainer {
+        width: 55%;
+    }
+
+}
+
+/* Computadoras */
+@media (min-width: 1024px) {
+    .indexMainContainer {
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    /* TABLES */
+
+
+    table.tables {
+        font-size: 1.4rem;
+    }
+
+    /* FORM */
+    #formMainContainer {
+        max-width: 768px;
+        margin: 60px auto;
+    }
+
+    .lastname {
+        float: right;
+        width: 45%;
+    }
+
+    .message {
+        float: none;
+    }
+
+    .name {
+        float: left;
+        width: 45%;
+    }
+
+
+    /*  PREMIER  */
+
+    .dinamicTableFormContainer {
+        width: 60%;
+    }
+
+    .weaponMainContainer {
+        width: 100%;
+        height: 80%;
+    }
+
+    /*  VANDAL  */
+
+    .weaponMainContainer {
+        width: 100%;
+        height: 80%;
+    }
+
+    .topContainer {
+        height: 50%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    .mainFeatures {
+        width: 90%;
+        height: fit-content;
+        margin: 0 2rem;
+    }
+
+    .videoContainer {
+        width: auto;
+        height: auto;
+        margin: 2rem 0;
+    }
+
+    .videoContainer video {
+        height: 100%;
+        width: 100%;
+    }
+
+    .dañoImg {
+        height: 20%;
+        /* width: fit-content; */
+    }
+
 }
