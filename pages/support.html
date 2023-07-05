@@ -39,23 +39,22 @@
         <div class="underline"></div>
         <form id="contactForm">
             <div class="name">
-                <input type="text" placeholder="NOMBRE" name="name" required>
+                <input class="formData" type="text" placeholder="NOMBRE" name="name" required>
             </div>
             <div class="lastname">
-                <input type="text" placeholder="APELLIDO" name="lastname" required>
+                <input class="formData" type="text" placeholder="APELLIDO" name="lastname" required>
             </div>
             <div class="email">
-                <input type="email" placeholder="EMAIL" name="email" required>
+                <input class="formData" type="email" placeholder="EMAIL" name="email" required>
             </div>
             <div class="subject">
-                <select name="subject" required>
-                    <option disabled hidden selected>ASUNTO</option>
+                <select class="formData" name="subject" required>
+                    <option selected>SUGERENCIAS</option>
                     <option>REPORTE DE PROBLEMAS</option>
-                    <option>SUGERENCIAS</option>
                 </select>
             </div>
             <div class="message">
-                <textarea name="message" placeholder="¿QUÉ TE GUSTARÍA DECIRNOS?" cols="30" rows="5"
+                <textarea class="formData" name="message" placeholder="¿QUÉ TE GUSTARÍA DECIRNOS?" cols="30" rows="5"
                     required></textarea>
             </div>
 
@@ -63,16 +62,18 @@
                 <p>KAY/ON'T CHECK:</p>
                 <p><span id="valorA"> </span> + <span id="valorB"> </span></p>
                 <input type="text" name="userAnswer" id="userAnswer" required maxlength="2">
+                <p id="captchaVerification"></p>
             </div>
 
             <div class="submitBtn">
-                <input type="submit" value="ENVIAR" id="formButton" class="btnInvalid" disabled />
+                <button type="submit" id="formButton" class="btnInvalid" disabled> ENVIAR </button>
             </div>
         </form>
 
         <div class="submittedForm">
             <p>¡Tu formulario ha sido enviado!</p>
             <p>Te contactaremos dentro de las próximas 72<span>hs</span> vía e-mail. </p>
+            <p>Serás redirigido al formulario dentro de 5<span>s</span>.</p>
         </div>
 
     </main>

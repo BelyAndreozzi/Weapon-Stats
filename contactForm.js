@@ -1,6 +1,8 @@
 "use strict"
 
+let contactForm = document.querySelector("#contactForm");
 let c
+
 
 numberGenerator()
 captchaGenerator()
@@ -28,37 +30,57 @@ function captchaGenerator() {
     })
 }
 
-
 function checkAnswer(userAnswerValue) {
     if (userAnswerValue == c) {
         document.querySelector("#formButton").removeAttribute("disabled")
         document.querySelector("#formButton").classList.remove("btnInvalid")
         document.querySelector("#formButton").classList.add("btnValid")
+        document.querySelector("#captchaVerification").innerHTML = "Resultado correcto :)"
     } else {
         document.querySelector("#formButton").setAttribute("disabled", "")
         document.querySelector("#formButton").classList.remove("btnValid")
         document.querySelector("#formButton").classList.add("btnInvalid")
-
+        document.querySelector("#captchaVerification").innerHTML = "Resultado incorrecto :("
     }
 }
 
 
-let submitBtn = document.querySelector(".submitBtn");
-let contactForm = document.querySelector("#contactForm");
-let submittedForm = document.querySelector(".submittedForm");
-let formTitle = document.querySelector(".formTitle");
-
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-});
-
-submitBtn.addEventListener("click", function () {
-    contactForm.classList.add("hideContactForm");
-    formTitle.innerHTML = "GRACIAS POR CONTACTARNOS!";
-    submittedForm.classList.add("showSubmittedForm");
-    setTimeout('document.location.reload()', 3000);
-
+    if (validateForm()) {
+        showFormConfirmation()
+    }
 })
+
+function getFormValue() {
+
+    let allFormDataInputs = document.querySelectorAll('.formData')
+
+    let allDataValue = []
+
+    allFormDataInputs.forEach(input => allDataValue.push(input.value))
+
+    return allDataValue
+}
+
+function validateForm() {
+    let formData = getFormValue()
+
+    if (formData == '') {
+        return false
+    } else {
+        return true
+    }
+}
+
+function showFormConfirmation() {
+    contactForm.classList.add("hideContactForm");
+    document.querySelector(".formTitle").innerHTML = "¡GRACIAS POR CONTACTARNOS!";
+    document.querySelector(".submittedForm").classList.add("showSubmittedForm");
+    setTimeout('document.location.reload()', 5000);
+}
+
+
 
 
 
